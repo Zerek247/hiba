@@ -6,6 +6,9 @@ import GenerateButton from "./components/GenerateButton";
 import ValentineReveal from "./components/ValentineReveal";
 import Sparkles from "./components/Sparkles";
 import HeartParticles from "./components/HeartParticles";
+import ParticlesBackground from "./components/ParticlesBackground"
+import FloatingFlowers from "./components/FloatingFlowers"
+
 
 export default function App() {
   const [revealed, setRevealed] = useState(false);

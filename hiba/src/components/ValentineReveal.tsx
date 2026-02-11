@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import NeonFlowers from "./NeonFlowers";
 
+
 const IMAGE_URL =
-  "/images/hiba.png";
+  "images/hiba.png";
 
 export default function ValentineReveal() {
   return (
