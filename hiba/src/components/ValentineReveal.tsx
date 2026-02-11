@@ -23,7 +23,8 @@ export default function ValentineReveal() {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ delay: 0.2, duration: 0.9, type: "spring", stiffness: 80 }}
       >
-        <span className="neon-pink">{"Happy Valentine's Day"}</span>
+        <span className="neon-pink block">{"Happy Valentine's Day"}</span>
+        <span className="neon-red block">{"Hiba"}</span>
       </motion.h1>
 
       {/* Arabic subtitle */}
