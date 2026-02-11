@@ -162,7 +162,7 @@ export function ValentineReveal() {
           >
             <div className="overflow-hidden rounded-2xl">
               <Image
-                src="/images/image.png"
+                src="/images/hiba.png"
                 alt="Valentine's Day surprise"
                 width={320}
                 height={400}
