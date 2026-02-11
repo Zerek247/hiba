@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  background: #0a0a0a;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Neon glow effects */
+.neon-pink {
+  text-shadow:
+    0 0 7px #ff2d87,
+    0 0 10px #ff2d87,
+    0 0 21px #ff2d87,
+    0 0 42px #ff2d87;
+}
+
+.neon-blue {
+  text-shadow:
+    0 0 7px #00b4ff,
+    0 0 10px #00b4ff,
+    0 0 21px #00b4ff,
+    0 0 42px #00b4ff;
+}
+
+.neon-red {
+  text-shadow:
+    0 0 7px #ff0040,
+    0 0 10px #ff0040,
+    0 0 21px #ff0040,
+    0 0 42px #ff0040;
+}
+
+.glow-border-pink {
+  box-shadow:
+    0 0 5px #ff2d87,
+    0 0 15px #ff2d8766,
+    0 0 30px #ff2d8733,
+    inset 0 0 5px #ff2d8733;
+}
+
+.glow-border-blue {
+  box-shadow:
+    0 0 5px #00b4ff,
+    0 0 15px #00b4ff66,
+    0 0 30px #00b4ff33,
+    inset 0 0 5px #00b4ff33;
+}
+
+.glow-border-red {
+  box-shadow:
+    0 0 5px #ff0040,
+    0 0 15px #ff004066,
+    0 0 30px #ff004033,
+    inset 0 0 5px #ff004033;
+}
+
+/* Button glow animation */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff2d87, #00b4ff, #ff0040, #ff2d87);
+  background-size: 400% 400%;
+  z-index: -1;
+  border-radius: inherit;
+  animation: gradient-rotate 3s ease infinite;
+}
+
+@keyframes gradient-rotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff2d8744;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff2d8788;
+}
