@@ -2,5 +2,5 @@
 2:I[61237,["/hiba/_next/static/chunks/356b7ae94fda63c5.js"],"ValentineReveal"]
 3:I[30678,["/hiba/_next/static/chunks/62e0c8c363f1b245.js","/hiba/_next/static/chunks/812c26f4b9a86938.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"buildId":"49RfUifps8DISDcxYlDJ7","rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/hiba/_next/static/chunks/356b7ae94fda63c5.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"YPvQOqS_EOrWqkC-wxWWp","rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/hiba/_next/static/chunks/356b7ae94fda63c5.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
 5:null
