@@ -15,11 +15,15 @@ interface Particle {
 
 const COLORS = ["#ff2d87", "#ff0040", "#00b4ff", "#ff69b4", "#ff3366"];
 
-export default function HeartParticles() {
+type Props = {
+  count?: number;
+};
+
+export default function HeartParticles({ count = 15 }: Props) {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
-    const items: Particle[] = Array.from({ length: 15 }, (_, i) => ({
+    const items: Particle[] = Array.from({ length: count }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
@@ -29,7 +33,7 @@ export default function HeartParticles() {
       duration: 3 + Math.random() * 3,
     }));
     setParticles(items);
-  }, []);
+  }, [count]);
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0">

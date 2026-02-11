@@ -14,11 +14,15 @@ interface Sparkle {
 
 const COLORS = ["#ff2d87", "#00b4ff", "#ff0040", "#ff69b4"];
 
-export default function Sparkles() {
+type Props = {
+  count?: number;
+};
+
+export default function Sparkles({ count = 30 }: Props) {
   const [sparkles, setSparkles] = useState<Sparkle[]>([]);
 
   useEffect(() => {
-    const items: Sparkle[] = Array.from({ length: 30 }, (_, i) => ({
+    const items: Sparkle[] = Array.from({ length: count }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
       delay: Math.random() * 5,
@@ -30,7 +34,7 @@ export default function Sparkles() {
       ],
     }));
     setSparkles(items);
-  }, []);
+  }, [count]);
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-10">
@@ -47,7 +51,11 @@ export default function Sparkles() {
             filter: `drop-shadow(0 0 4px ${s.color})`,
           }}
         >
-          {s.type === "heart" ? "\u2665" : s.type === "star" ? "\u2726" : "\u2022"}
+          {s.type === "heart"
+            ? "\u2665"
+            : s.type === "star"
+            ? "\u2726"
+            : "\u2022"}
         </span>
       ))}
     </div>

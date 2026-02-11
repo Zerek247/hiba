@@ -1,15 +1,19 @@
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 const colors = [
   "text-pink-500",
   "text-cyan-400",
   "text-red-500"
-]
+];
 
-export default function FloatingFlowers() {
+type Props = {
+  count?: number;
+};
+
+export default function FloatingFlowers({ count = 10 }: Props) {
   return (
     <>
-      {[...Array(10)].map((_, i) => (
+      {[...Array(count)].map((_, i) => (
         <motion.div
           key={i}
           className={`absolute text-2xl ${colors[i % 3]}`}
@@ -30,5 +34,5 @@ export default function FloatingFlowers() {
         </motion.div>
       ))}
     </>
-  )
+  );
 }
